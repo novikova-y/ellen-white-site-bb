@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumFilterTests {
 
    @Test
-   public void SeleniumFilterImagesTest () throws InterruptedException {
+   public void filterImagesTest () throws InterruptedException {
 
        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
        WebDriver driver = new FirefoxDriver();
@@ -35,7 +35,7 @@ public class SeleniumFilterTests {
    }
 
    @Test
-    public void SeleniumFilterDocsTest () throws InterruptedException {
+    public void filterDocsTest () throws InterruptedException {
 
        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
        WebDriver driver = new ChromeDriver();
@@ -57,5 +57,29 @@ public class SeleniumFilterTests {
 
    }
 
+   @Test
+    public void filterAudiosTest () throws InterruptedException {
+
+       System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
+       WebDriver driver = new FirefoxDriver();
+       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+
+       driver.get("http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles");
+
+       WebElement element = driver.findElement(By.id("edit-checkboxes-4-audio"));
+       element.click();
+
+       driver.findElement(By.id("edit-filter-button--9")).click();
+
+       Thread.sleep(10000);
+       assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio", driver.getCurrentUrl());
+
+       driver.close();
+       driver.quit();
+
+
+
+   }
 
 }
