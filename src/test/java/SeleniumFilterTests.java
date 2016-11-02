@@ -65,9 +65,12 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+        //Thread.sleep(10000);
+        //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo", driver.getCurrentUrl());
 
-        Thread.sleep(10000);
-        assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo", driver.getCurrentUrl());
+        driver.findElement(By.linkText("1. H. M. S. Richards talks about Ellen White")).click();
+        WebElement vdVwr = driver.findElement(By.id("youtube-field-player"));
+        Assert.assertEquals(true, vdVwr.isDisplayed());
     }
 
     @Test

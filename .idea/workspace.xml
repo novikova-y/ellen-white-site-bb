@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="594d88e6-558f-41ac-ab96-f0bae3326507" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumFilterTests.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" />
     </list>
     <ignored path="EllenGWhiteSite.iws" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="SeleniumFilterTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-954">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="26">
+              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,28 +179,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.SeleniumFilterTests">
-    <configuration default="false" name="SeleniumFilterTests.SeleniumFilterDocsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="EllenWhiteSite" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SeleniumFilterTests" />
-      <option name="METHOD_NAME" value="SeleniumFilterDocsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.SeleniumFilterTests.FilterVideosTest">
     <configuration default="false" name="SeleniumFilterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="EllenWhiteSite" />
@@ -273,6 +251,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SeleniumFilterTests" />
       <option name="METHOD_NAME" value="filterDocsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SeleniumFilterTests.FilterVideosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="EllenWhiteSite" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SeleniumFilterTests" />
+      <option name="METHOD_NAME" value="FilterVideosTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -531,19 +530,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.SeleniumFilterDocsTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterAudiosTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterVideosTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterDocsTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterAudiosTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterVideosTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterDocsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterVideosTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterDocsTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterVideosTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterAudiosTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.SeleniumFilterDocsTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterVideosTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterDocsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterVideosTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.filterAudiosTest" />
       </list>
     </recent_temporary>
   </component>
@@ -561,15 +560,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumFilterTests - 2016.11.02 at 14h 00m 48s.xml">
-      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests - 2016.11.02 at 14h 03m 11s.xml">
-      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests - 2016.11.02 at 14h 26m 02s.xml">
-      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumFilterTests - 2016.11.02 at 14h 31m 24s.xml">
       <configuration name="SeleniumFilterTests" configurationId="JUnit" />
     </history-entry>
@@ -579,17 +569,26 @@
     <history-entry file="SeleniumFilterTests - 2016.11.02 at 14h 38m 50s.xml">
       <configuration name="SeleniumFilterTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_SeleniumFilterDocsTest - 2016.11.02 at 13h 14m 22s.xml">
-      <configuration name="SeleniumFilterTests.SeleniumFilterDocsTest" configurationId="JUnit" />
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 29m 31s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_filterAudiosTest - 2016.11.02 at 13h 48m 55s.xml">
-      <configuration name="SeleniumFilterTests.filterAudiosTest" configurationId="JUnit" />
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 31m 46s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_filterDocsTest - 2016.11.02 at 14h 23m 41s.xml">
-      <configuration name="SeleniumFilterTests.filterDocsTest" configurationId="JUnit" />
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 34m 16s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_filterVideosTest - 2016.11.02 at 13h 59m 02s.xml">
-      <configuration name="SeleniumFilterTests.filterVideosTest" configurationId="JUnit" />
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 35m 32s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 38m 26s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 41m 07s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.02 at 15h 42m 07s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -660,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="26">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
