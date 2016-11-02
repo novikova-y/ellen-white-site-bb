@@ -1,4 +1,6 @@
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,95 +13,95 @@ import java.util.concurrent.TimeUnit;
 
 
 public class SeleniumFilterTests {
+    final String libraryURL = "http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles";
+    private static WebDriver driver;
 
-    @Test
-    public void filterDocsTest() throws InterruptedException {
+    @BeforeClass
+    public static void initDriver() {
 
         System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        /*System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");*/
+        /*driver = new FirefoxDriver();*/
+        driver = new ChromeDriver();
+
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 
-        driver.get("http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles");
+    }
+
+    @AfterClass
+    public static void closeDriver() {
+        driver.close();
+        driver.quit();
+    }
+    @Test
+    public void FilterDocumentsTest() throws InterruptedException {
+
+        driver.get(libraryURL);
+
         WebElement element = driver.findElement(By.id("edit-checkboxes-4-document"));
         element.click();
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
-        Thread.sleep(10000);
-        assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument", driver.getCurrentUrl());
 
+        //Thread.sleep(10000);
+        //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument", driver.getCurrentUrl());
+        driver.findElement(By.linkText("1. Original Documentation About John White by the Justice of Pease (DF 701)")).click();
 
-        driver.close();
-        driver.quit();
-
-    }
-
-    @Test
-    public void filterImagesTest() throws InterruptedException {
-
-        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
-        driver.get("http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles");
-
-        WebElement element = driver.findElement(By.id("edit-checkboxes-4-image"));
-        element.click();
-
-        driver.findElement(By.id("edit-filter-button--9")).click();
-
-        Thread.sleep(10000);
-        assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aimage", driver.getCurrentUrl());
-
-        driver.close();
-        driver.quit();
-    }
-
-    @Test
-    public void filterAudiosTest() throws InterruptedException {
-
-        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
-        driver.get("http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles");
-
-        WebElement element = driver.findElement(By.id("edit-checkboxes-4-audio"));
-        element.click();
-
-        driver.findElement(By.id("edit-filter-button--9")).click();
-
-        Thread.sleep(10000);
-        assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio", driver.getCurrentUrl());
-
-        driver.close();
-        driver.quit();
+        WebElement docVwr = driver.findElement(By.id("toolbar_documentViewer0"));
+        Assert.assertEquals(true, docVwr.isDisplayed());
 
     }
 
     @Test
-    public void filterVideosTest() throws InterruptedException {
+    public void FilterVideosTest() throws InterruptedException {
 
-        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        WebDriver driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
-        driver.get("http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles");
+        driver.get(libraryURL);
 
         WebElement element = driver.findElement(By.id("edit-checkboxes-4-video"));
         element.click();
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+
         Thread.sleep(10000);
         assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo", driver.getCurrentUrl());
+    }
 
-        driver.close();
-        driver.quit();
+    @Test
+    public void FilterImagesTest() throws InterruptedException {
+
+        driver.get(libraryURL);
+
+        WebElement element = driver.findElement(By.id("edit-checkboxes-4-image"));
+        element.click();
+
+        driver.findElement(By.id("edit-filter-button--9")).click();
+
+
+        //Thread.sleep(10000);
+        //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aimage", driver.getCurrentUrl());
+        driver.findElement(By.linkText("1. David Laceys Mother- b. c. 1786")).click();
+
+        WebElement imgVwr = driver.findElement(By.cssSelector("button[title=\"Zoom in\"]"));
+        Assert.assertEquals(true, imgVwr.isDisplayed());
+    }
+
+    @Test
+    public void FilterAudiosTest() throws InterruptedException {
+
+        driver.get(libraryURL);
+
+        WebElement element = driver.findElement(By.id("edit-checkboxes-4-audio"));
+        element.click();
+
+        driver.findElement(By.id("edit-filter-button--9")).click();
+
+
+        Thread.sleep(10000);
+        assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio", driver.getCurrentUrl());
 
     }
 
