@@ -125,6 +125,23 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+        //load 50 elements on page
+        driver.findElement(By.id("edit-radios-1")).click();
+        driver.findElement(By.id("edit-submit")).click();
+
+        List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
+
+        for (int i = 0; i < libraryList.size(); i++){
+            //check if has
+            Boolean isListLink = Objects.equals(libraryList.get(i).getCssValue("clear"),"none");
+
+            if (isListLink){
+                WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
+
+                System.out.println(currentElement.getAttribute("href"));
+            }
+        }
+
 
         //Thread.sleep(10000);
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio", driver.getCurrentUrl());
