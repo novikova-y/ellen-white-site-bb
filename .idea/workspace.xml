@@ -37,8 +37,8 @@
       <file leaf-file-name="SeleniumFilterTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+            <state relative-caret-position="80">
+              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,7 +178,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.SeleniumFilterTests.FilterAudiosTest">
+  <component name="RunManager" selected="JUnit.SeleniumFilterTests.FilterVideosTest">
     <configuration default="false" name="SeleniumFilterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="EllenWhiteSite" />
@@ -537,11 +537,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterAudiosTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterImagesTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterDocumentsTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterVideosTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterVideosTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterAudiosTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterImagesTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterDocumentsTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
       </list>
     </recent_temporary>
   </component>
@@ -559,9 +559,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumFilterTests - 2016.11.03 at 12h 16m 33s.xml">
-      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumFilterTests_FilterAudiosTest - 2016.11.03 at 13h 58m 27s.xml">
       <configuration name="SeleniumFilterTests.FilterAudiosTest" configurationId="JUnit" />
     </history-entry>
@@ -588,6 +585,9 @@
     </history-entry>
     <history-entry file="SeleniumFilterTests_FilterImagesTest - 2016.11.03 at 13h 45m 41s.xml">
       <configuration name="SeleniumFilterTests.FilterImagesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.03 at 14h 27m 00s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -676,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+        <state relative-caret-position="80">
+          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

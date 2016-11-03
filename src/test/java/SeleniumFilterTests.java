@@ -163,12 +163,30 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+        //load 100 elements  on page
+        driver.findElement(By.id("edit-radios-2")).click();
+        driver.findElement(By.id("edit-submit")).click();
+
+
+        List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
+
+        for (int i = 0; i < libraryList.size(); i++){
+            //check if has
+            Boolean isListLink = Objects.equals(libraryList.get(i).getCssValue("clear"),"none");
+
+            if (isListLink){
+                WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
+
+                System.out.println(currentElement.getAttribute("href"));
+            }
+        }
+
         //Thread.sleep(10000);
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo", driver.getCurrentUrl());
 
-        driver.findElement(By.linkText("1. H. M. S. Richards talks about Ellen White")).click();
-        WebElement vdVwr = driver.findElement(By.id("youtube-field-player"));
-        Assert.assertEquals(true, vdVwr.isDisplayed());
+        //driver.findElement(By.linkText("1. H. M. S. Richards talks about Ellen White")).click();
+        //WebElement vdVwr = driver.findElement(By.id("youtube-field-player"));
+        //Assert.assertEquals(true, vdVwr.isDisplayed());
     }
 
 }
