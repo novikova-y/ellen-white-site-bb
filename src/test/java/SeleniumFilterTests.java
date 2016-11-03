@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,8 +24,8 @@ public class SeleniumFilterTests {
     public static void initDriver() {
 
         System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        /*System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");*/
-        /*driver = new FirefoxDriver();*/
+        //System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
         driver = new ChromeDriver();
 
 
@@ -49,13 +52,30 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+        //load 100 elements  on page
+        driver.findElement(By.id("edit-radios-2")).click();
+        driver.findElement(By.id("edit-submit")).click();
+
+        
+        List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
+
+        for (int i = 0; i < libraryList.size(); i++){
+            //check if has
+            Boolean isListLink = Objects.equals(libraryList.get(i).getCssValue("clear"),"none");
+
+            if (isListLink){
+                WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
+
+                System.out.println(currentElement.getAttribute("href"));
+            }
+        }
 
         //Thread.sleep(10000);
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument", driver.getCurrentUrl());
-        driver.findElement(By.linkText("1. Original Documentation About John White by the Justice of Pease (DF 701)")).click();
+        //driver.findElement(By.linkText("1. Original Documentation About John White by the Justice of Pease (DF 701)")).click();
 
-        WebElement docVwr = driver.findElement(By.id("toolbar_documentViewer0"));
-        Assert.assertEquals(true, docVwr.isDisplayed());
+        //WebElement docVwr = driver.findElement(By.id("toolbar_documentViewer0"));
+        //Assert.assertEquals(true, docVwr.isDisplayed());
 
     }
 
