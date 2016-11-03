@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,20 +21,23 @@ public class SeleniumFilterTests {
     final String libraryURL = "http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles";
     private static WebDriver driver;
 
+    private void openLinkInNewTab (WebElement element, String urlString){
+        String selectLinkOpenInNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
+        element.sendKeys(selectLinkOpenInNewTab);
+    }
+
     @BeforeClass
     public static void initDriver() {
 
-        //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
-
+        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        //System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 
     }
-
 
     @AfterClass
     public static void closeDriver() {
@@ -52,11 +56,11 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
-        //load 100 elements  on page
-        driver.findElement(By.id("edit-radios-2")).click();
+        //load 50 elements on page
+        driver.findElement(By.id("edit-radios-1")).click();
         driver.findElement(By.id("edit-submit")).click();
 
-
+        //find all elements of the list on page
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
 
         for (int i = 0; i < libraryList.size(); i++){
@@ -65,8 +69,11 @@ public class SeleniumFilterTests {
 
             if (isListLink){
                 WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
+                String currentLink = currentElement.getAttribute("href");
+                openLinkInNewTab(currentElement, currentLink);
 
-                System.out.println(currentElement.getAttribute("href"));
+
+                //System.out.println(currentElement.getAttribute("href"));
             }
         }
 
@@ -89,10 +96,11 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
-        //load 100 elements  on page
+        //load 100 elements on page
         driver.findElement(By.id("edit-radios-2")).click();
         driver.findElement(By.id("edit-submit")).click();
 
+        //find all elements of the list on page
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
 
         for (int i = 0; i < libraryList.size(); i++){
@@ -129,6 +137,7 @@ public class SeleniumFilterTests {
         driver.findElement(By.id("edit-radios-1")).click();
         driver.findElement(By.id("edit-submit")).click();
 
+        //find all elements of the list on page
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
 
         for (int i = 0; i < libraryList.size(); i++){
@@ -163,7 +172,7 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
-
+        //find all elements of the list on page
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
 
         for (int i = 0; i < libraryList.size(); i++){
