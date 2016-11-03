@@ -56,7 +56,7 @@ public class SeleniumFilterTests {
         driver.findElement(By.id("edit-radios-2")).click();
         driver.findElement(By.id("edit-submit")).click();
 
-        
+
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
 
         for (int i = 0; i < libraryList.size(); i++){
@@ -89,13 +89,30 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+        //load 100 elements  on page
+        driver.findElement(By.id("edit-radios-2")).click();
+        driver.findElement(By.id("edit-submit")).click();
+
+        List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
+
+        for (int i = 0; i < libraryList.size(); i++){
+            //check if has
+            Boolean isListLink = Objects.equals(libraryList.get(i).getCssValue("clear"),"none");
+
+            if (isListLink){
+                WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
+
+                System.out.println(currentElement.getAttribute("href"));
+            }
+        }
+
 
         //Thread.sleep(10000);
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aimage", driver.getCurrentUrl());
-        driver.findElement(By.linkText("1. David Laceys Mother- b. c. 1786")).click();
+        //driver.findElement(By.linkText("1. David Laceys Mother- b. c. 1786")).click();
 
-        WebElement imgVwr = driver.findElement(By.cssSelector("button[title=\"Zoom in\"]"));
-        Assert.assertEquals(true, imgVwr.isDisplayed());
+        //WebElement imgVwr = driver.findElement(By.cssSelector("button[title=\"Zoom in\"]"));
+        //Assert.assertEquals(true, imgVwr.isDisplayed());
     }
 
     @Test
@@ -108,13 +125,14 @@ public class SeleniumFilterTests {
 
         driver.findElement(By.id("edit-filter-button--9")).click();
 
+
         //Thread.sleep(10000);
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio", driver.getCurrentUrl());
-        driver.findElement(By.linkText("1. Forecast of the World's Destiny")).click();
+        //driver.findElement(By.linkText("1. Forecast of the World's Destiny")).click();
 
 
-        WebElement adPlr = driver.findElement(By.className("jp-interface"));
-        Assert.assertEquals(true, adPlr.isDisplayed());
+        //WebElement adPlr = driver.findElement(By.className("jp-interface"));
+        //Assert.assertEquals(true, adPlr.isDisplayed());
 
     }
 
