@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594d88e6-558f-41ac-ab96-f0bae3326507" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" />
     </list>
     <ignored path="EllenGWhiteSite.iws" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="SeleniumFilterTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -538,10 +539,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterVideosTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterAudiosTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterImagesTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterDocumentsTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterAudiosTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterImagesTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SeleniumFilterTests.FilterDocumentsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -559,23 +560,17 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="SeleniumFilterTests - 2016.11.03 at 14h 50m 34s.xml">
+      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests - 2016.11.03 at 15h 02m 23s.xml">
+      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SeleniumFilterTests_FilterAudiosTest - 2016.11.03 at 13h 58m 27s.xml">
       <configuration name="SeleniumFilterTests.FilterAudiosTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumFilterTests_FilterAudiosTest - 2016.11.03 at 14h 00m 37s.xml">
       <configuration name="SeleniumFilterTests.FilterAudiosTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 12h 39m 01s.xml">
-      <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 12h 45m 51s.xml">
-      <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 13h 01m 18s.xml">
-      <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 13h 14m 20s.xml">
-      <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 13h 15m 01s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
@@ -587,6 +582,12 @@
       <configuration name="SeleniumFilterTests.FilterImagesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.03 at 14h 27m 00s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.03 at 14h 49m 37s.xml">
+      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.03 at 15h 06m 56s.xml">
       <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -676,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+        <state relative-caret-position="105">
+          <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

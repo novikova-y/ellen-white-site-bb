@@ -23,10 +23,10 @@ public class SeleniumFilterTests {
     @BeforeClass
     public static void initDriver() {
 
-        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        //System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
+        driver = new FirefoxDriver();
+        //driver = new ChromeDriver();
 
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -162,10 +162,6 @@ public class SeleniumFilterTests {
         element.click();
 
         driver.findElement(By.id("edit-filter-button--9")).click();
-
-        //load 100 elements  on page
-        driver.findElement(By.id("edit-radios-2")).click();
-        driver.findElement(By.id("edit-submit")).click();
 
 
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
