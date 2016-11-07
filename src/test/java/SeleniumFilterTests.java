@@ -21,6 +21,7 @@ public class SeleniumFilterTests {
 
     final String libraryURL = "http://ellenwhite.org/library?f%5B0%5D=bundle%3Afiles";
     private static WebDriver driver;
+    private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();
 
     private void openLinkInNewTab (WebElement element, String urlString){
         String selectLinkOpenInNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
@@ -109,7 +110,7 @@ public class SeleniumFilterTests {
 
         Thread.sleep(5000);
 
-        checkToolbarPresence();
+        checkToolbarPresence (element, urlString);
 
         Thread.sleep(1000);
 
@@ -134,9 +135,12 @@ public class SeleniumFilterTests {
         driver.navigate().to(url);
     }
 
-    private void checkToolbarPresence(){
-        WebElement dynamicElement = (new WebDriverWait(driver, 5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("toolbar_documentViewer0")));
+    private void checkToolbarPresence(WebElement element, String url) {
+        if ( driver.findElements(By.id("toolbar_documentViewer0")).size() == 0){
+            exceptionMap.put(element, url);
+            //WebElement dynamicElement = (new WebDriverWait(driver, 5))
+            //.until(ExpectedConditions.presenceOfElementLocated(By.id("toolbar_documentViewer0")));
+        }
     }
 
     private void closeTab(){
