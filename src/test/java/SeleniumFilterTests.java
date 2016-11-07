@@ -8,11 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.*;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
@@ -25,6 +26,7 @@ public class SeleniumFilterTests {
         String selectLinkOpenInNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
         element.sendKeys(selectLinkOpenInNewTab);
     }
+    final String libraryDocsBy100 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=100";
 
     @BeforeClass
     public static void initDriver() {
@@ -55,13 +57,13 @@ public class SeleniumFilterTests {
         element.click();
 
         driver.findElement(By.id("edit-filter-button--9")).click();
-
-        //load 50 elements on page
-        driver.findElement(By.id("edit-radios-1")).click();
-        driver.findElement(By.id("edit-submit")).click();
+       driver.get(libraryDocsBy100);
 
         //find all elements of the list on page
+
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
+
+        Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
 
         for (int i = 0; i < libraryList.size(); i++){
             //check if has
@@ -70,20 +72,75 @@ public class SeleniumFilterTests {
             if (isListLink){
                 WebElement currentElement = libraryList.get(i).findElements(By.className("collection-page-search-result-snippet")).get(0).findElements(By.tagName("a")).get(0);
                 String currentLink = currentElement.getAttribute("href");
-                openLinkInNewTab(currentElement, currentLink);
 
+                libraryMap.put(currentElement, currentLink);
 
-                //System.out.println(currentElement.getAttribute("href"));
+//                inspectLibraryLink(currentElement, currentLink);
             }
         }
 
-        //Thread.sleep(10000);
-        //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument", driver.getCurrentUrl());
-        //driver.findElement(By.linkText("1. Original Documentation About John White by the Justice of Pease (DF 701)")).click();
+        for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
 
-        //WebElement docVwr = driver.findElement(By.id("toolbar_documentViewer0"));
-        //Assert.assertEquals(true, docVwr.isDisplayed());
+//        Thread.sleep(5000);
 
+        System.out.println(libraryMap.size());
+
+        for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            System.out.println("! ENTRY !");
+
+            inspectLibraryLink(entry.getKey(), entry.getValue());
+        }
+
+    }
+
+    private void inspectLibraryLink(WebElement element, String urlString) throws InterruptedException{
+        Thread.sleep(1000);
+
+        System.out.println(urlString);
+
+//        openLinkInNewTab(element, urlString);
+
+        Thread.sleep(1000);
+
+//        switchTabToRight();
+        changeURL(urlString);
+
+        Thread.sleep(5000);
+
+        checkToolbarPresence();
+
+        Thread.sleep(1000);
+
+//        closeTab();
+    }
+
+    /*private void openLinkInNewTab (WebElement element, String urlString) throws InterruptedException{
+        String selectLinkOpenInNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
+        element.sendKeys(selectLinkOpenInNewTab);
+    }*/
+
+    private void switchTabToRight() throws InterruptedException{
+        String windowHandle = driver.getWindowHandle();
+        ArrayList<String> tabs = new ArrayList (driver.getWindowHandles());
+
+//        System.out.println(tabs);
+
+        driver.switchTo().window(tabs.get(1));
+    }
+
+    private void changeURL(String url){
+        driver.navigate().to(url);
+    }
+
+    private void checkToolbarPresence(){
+        WebElement dynamicElement = (new WebDriverWait(driver, 5))
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("toolbar_documentViewer0")));
+    }
+
+    private void closeTab(){
+        driver.findElements(By.tagName("Body")).get(0).sendKeys(Keys.CONTROL + "W");
     }
 
     @Test
