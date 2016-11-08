@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594d88e6-558f-41ac-ab96-f0bae3326507" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/SeleniumFilterTests.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" />
     </list>
@@ -38,16 +39,12 @@
       <file leaf-file-name="SeleniumFilterTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+            <state relative-caret-position="165">
+              <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#781#801#0" expanded="true" />
                 <element signature="e#2315#2335#0" expanded="true" />
-                <element signature="e#4415#4416#0" expanded="true" />
-                <element signature="e#4456#4457#0" expanded="true" />
-                <element signature="e#4874#4875#0" expanded="true" />
-                <element signature="e#4965#4966#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,8 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,6 +186,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -582,35 +579,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumFilterTests - 2016.11.07 at 12h 12m 03s.xml">
+    <history-entry file="SeleniumFilterTests - 2016.11.08 at 12h 14m 27s.xml">
       <configuration name="SeleniumFilterTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 17h 07m 22s.xml">
+    <history-entry file="SeleniumFilterTests - 2016.11.08 at 13h 02m 40s.xml">
+      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests - 2016.11.08 at 13h 38m 59s.xml">
+      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests - 2016.11.08 at 15h 16m 29s.xml">
+      <configuration name="SeleniumFilterTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 18h 11m 17s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.03 at 17h 48m 45s.xml">
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.08 at 12h 41m 45s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 12h 43m 14s.xml">
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.08 at 13h 47m 03s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 13h 06m 22s.xml">
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.08 at 13h 51m 38s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 15h 59m 18s.xml">
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.08 at 14h 12m 20s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 15h 59m 28s.xml">
+    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.08 at 16h 55m 06s.xml">
       <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterDocumentsTest - 2016.11.07 at 16h 18m 21s.xml">
-      <configuration name="SeleniumFilterTests.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterImagesTest - 2016.11.03 at 17h 50m 13s.xml">
-      <configuration name="SeleniumFilterTests.FilterImagesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumFilterTests_FilterVideosTest - 2016.11.03 at 17h 52m 30s.xml">
-      <configuration name="SeleniumFilterTests.FilterVideosTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -679,10 +676,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#781#801#0" expanded="true" />
             <element signature="e#2315#2335#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
-            <element signature="e#4965#4966#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -703,10 +696,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#781#801#0" expanded="true" />
             <element signature="e#2315#2335#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
-            <element signature="e#4965#4966#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,10 +716,26 @@
             <element signature="imports" expanded="true" />
             <element signature="e#781#801#0" expanded="true" />
             <element signature="e#2315#2335#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
-            <element signature="e#4965#4966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#781#801#0" expanded="true" />
+            <element signature="e#2315#2335#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -753,16 +758,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        <state relative-caret-position="165">
+          <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#781#801#0" expanded="true" />
             <element signature="e#2315#2335#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
-            <element signature="e#4965#4966#0" expanded="true" />
           </folding>
         </state>
       </provider>

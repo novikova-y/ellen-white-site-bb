@@ -27,15 +27,15 @@ public class SeleniumFilterTests {
         String selectLinkOpenInNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
         element.sendKeys(selectLinkOpenInNewTab);
     }
-    final String libraryDocsBy100 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=100";
+    final String libraryDocsBy500 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=500";
 
     @BeforeClass
     public static void initDriver() {
 
-        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        //System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
-        //driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
+        driver = new FirefoxDriver();
+        //driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -58,7 +58,7 @@ public class SeleniumFilterTests {
         element.click();
 
         driver.findElement(By.id("edit-filter-button--9")).click();
-       driver.get(libraryDocsBy100);
+       driver.get(libraryDocsBy500);
 
         //find all elements of the list on page
 
@@ -94,6 +94,7 @@ public class SeleniumFilterTests {
             inspectLibraryLink(entry.getKey(), entry.getValue());
         }
 
+        checkExceptionMap();
     }
 
     private void inspectLibraryLink(WebElement element, String urlString) throws InterruptedException{
@@ -135,13 +136,27 @@ public class SeleniumFilterTests {
         driver.navigate().to(url);
     }
 
-    private void checkToolbarPresence(WebElement element, String url) {
+    private void checkToolbarPresence(WebElement element, String url){
         if ( driver.findElements(By.id("toolbar_documentViewer0")).size() == 0){
             exceptionMap.put(element, url);
-            //WebElement dynamicElement = (new WebDriverWait(driver, 5))
-            //.until(ExpectedConditions.presenceOfElementLocated(By.id("toolbar_documentViewer0")));
         }
     }
+
+    private void checkExceptionMap(){
+        System.out.println(exceptionMap.size());
+
+        if (exceptionMap.size() <= 0) return;
+
+        System.out.println("EXC LIST ");
+
+        for (Map.Entry<WebElement, String> entry : exceptionMap.entrySet()){
+            System.out.println("EXC MAP ");
+            System.out.println(entry.getValue());
+        }
+
+        Assert.fail("some documents are missing!");
+    }
+
 
     private void closeTab(){
         driver.findElements(By.tagName("Body")).get(0).sendKeys(Keys.CONTROL + "W");
