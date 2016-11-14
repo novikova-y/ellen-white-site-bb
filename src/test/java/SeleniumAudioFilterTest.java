@@ -142,5 +142,6 @@ public class SeleniumAudioFilterTest {
     @AfterClass
     public static void afterClass(){
         driver.close();
+        driver.quit();
     }
 }
