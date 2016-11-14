@@ -6,33 +6,54 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-
+import java.io.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-
 public class SeleniumDocsFilterTest {
+
     private static WebDriver driver;
+
     final String pageURL = "http://ellenwhite.org/issues-and-answers";
 
     final String libraryDocsBy100 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=25";
-
 
     private static Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();
     private final String nextButtonClassName = "pager-next";
 
+    PrintWriter writer = null;
+
+    private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
+        try{
+            PrintWriter writer = new PrintWriter("linksFromLibrary.txt", "UTF-8");
+
+            writer.println("The first line");
+
+            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+                writer.println(entry.getValue() + "\n");
+            }
+
+            writer.close();
+        } catch (Exception e) {
+            // do something
+        }
+    }
+
     @Test
-    public void FilterDocumentsTest() throws InterruptedException {
+    public void FilterDocumentsTest() throws InterruptedException, Exception{
+
         final String libraryURL = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=100";
         final String toolbarName = "toolbar_documentViewer0";
 
         driver.navigate().to(libraryURL);
 
         iteratePages();
+
+        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -64,6 +85,8 @@ public class SeleniumDocsFilterTest {
             iteratePages();
         }
     }
+
+
 
     private void inspectPage(){
         List<WebElement> libraryList = driver.findElements(By.className("collection-search-results")).get(0).findElements(By.tagName("li"));
@@ -127,11 +150,17 @@ public class SeleniumDocsFilterTest {
         }
     }
 
+    private void closeTab(){
+        driver.findElements(By.tagName("Body")).get(0).sendKeys(Keys.CONTROL + "W");
+    }
+
     @BeforeClass
     public static void beforeClass(){
 
-        System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
-        driver = new FirefoxDriver();
+        //System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -140,6 +169,7 @@ public class SeleniumDocsFilterTest {
     @AfterClass
     public static void afterClass(){
         driver.close();
+        driver.quit();
+
     }
 }
-
