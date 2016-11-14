@@ -15,14 +15,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-
-
-public class SeleniumAudioFilterTest {
+public class SelenumVideoFilterTest {
 
     private static WebDriver driver;
     final String pageURL = "http://ellenwhite.org/issues-and-answers";
 
-    final String libraryDocsBy50 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio&rNum=50";
+    final String libraryDocs = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo";
 
 
     private static Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
@@ -30,9 +28,9 @@ public class SeleniumAudioFilterTest {
     private final String nextButtonClassName = "pager-next";
 
     @Test
-    public void FilterAudioTest() throws InterruptedException {
-        final String libraryURL = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio&rNum=50";
-        final String playerName = "jp-interface";
+    public void FilterVideosTest() throws InterruptedException {
+        final String libraryURL = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo";
+        final String playerName = "youtube-field-player";
 
         driver.navigate().to(libraryURL);
 
@@ -114,11 +112,11 @@ public class SeleniumAudioFilterTest {
         }
 
         for (Map.Entry<WebElement, String> entry : exceptionMap.entrySet()){
-            System.out.println("list of links with missing audio player");
+            System.out.println("list of links with missing video player");
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
-        Assert.fail("some audios are missing, full list is provided before");
+        Assert.fail("some videos are missing, full list is provided before");
     }
 
     private void changeURL(String url){
@@ -126,7 +124,7 @@ public class SeleniumAudioFilterTest {
     }
 
     private void checkToolbarPresence(WebElement element, String url){
-        if ( driver.findElements(By.className("jp-interface")).size() == 0){
+        if ( driver.findElements(By.id("youtube-field-player")).size() == 0){
             exceptionMap.put(element, url);
         }
     }
@@ -134,10 +132,10 @@ public class SeleniumAudioFilterTest {
     @BeforeClass
     public static void beforeClass(){
 
-        System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
-        driver = new FirefoxDriver();
-        //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        //driver = new ChromeDriver();
+        //System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

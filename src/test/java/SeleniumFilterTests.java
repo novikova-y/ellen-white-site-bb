@@ -33,9 +33,10 @@ public class SeleniumFilterTests {
     public static void initDriver() {
 
         //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        //driver = new ChromeDriver();
         System.setProperty("webdriver.gecko.driver", "/home/me/Downloads/geckodriver");
         driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
+
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -195,7 +196,7 @@ public class SeleniumFilterTests {
         //assertEquals("http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aimage", driver.getCurrentUrl());
         //driver.findElement(By.linkText("1. David Laceys Mother- b. c. 1786")).click();
 
-        //WebElement imgVwr = driver.findElement(By.cssSelector("button[title=\"Zoom in\"]"));
+        //WebElement imgVwr = driver.findElement(By.));
         //Assert.assertEquals(true, imgVwr.isDisplayed());
     }
 
