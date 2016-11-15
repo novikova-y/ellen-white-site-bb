@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594d88e6-558f-41ac-ab96-f0bae3326507" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java" afterPath="$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java" afterPath="$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java" />
     </list>
     <ignored path="EllenGWhiteSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,26 +41,24 @@
       <file leaf-file-name="SeleniumFilterTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="45">
               <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#781#801#0" expanded="true" />
-                <element signature="e#2316#2336#0" expanded="true" />
+                <element signature="e#4445#4446#0" expanded="false" />
+                <element signature="e#4486#4487#0" expanded="false" />
+                <element signature="e#5148#5149#0" expanded="false" />
+                <element signature="e#5239#5240#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeleniumImageFilterTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SeleniumImageFilterTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#895#915#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,16 +66,10 @@
       <file leaf-file-name="SeleniumDocsFilterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="186">
+              <caret line="55" column="12" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#783#803#0" expanded="true" />
-                <element signature="e#875#895#0" expanded="true" />
-                <element signature="e#4499#4500#0" expanded="true" />
-                <element signature="e#4540#4541#0" expanded="true" />
-                <element signature="e#4783#4784#0" expanded="true" />
-                <element signature="e#4874#4875#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +78,8 @@
       <file leaf-file-name="SelenumVideoFilterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="135" column="16" selection-start-line="132" selection-start-column="1" selection-end-line="141" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeleniumAudioFilterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SeleniumAudioFilterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="105">
+              <caret line="52" column="69" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,10 +122,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/SeleniumFilterTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java" />
       </list>
     </option>
   </component>
@@ -187,6 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,9 +240,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,7 +251,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.SeleniumAudioFilterTest">
+  <component name="RunManager" selected="JUnit.SelenumVideoFilterTest">
     <configuration default="false" name="SelenumVideoFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="EllenWhiteSite" />
@@ -614,10 +610,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SeleniumAudioFilterTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumDocsFilterTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumDocsFilterTest.FilterDocumentsTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SelenumVideoFilterTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SelenumVideoFilterTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SeleniumAudioFilterTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SeleniumDocsFilterTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SeleniumDocsFilterTest.FilterDocumentsTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.SelenumVideoFilterTest.FilterVideosTest" />
       </list>
     </recent_temporary>
@@ -636,31 +632,31 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumAudioFilterTest - 2016.11.14 at 17h 00m 44s.xml">
+    <history-entry file="SeleniumAudioFilterTest - 2016.11.15 at 12h 16m 17s.xml">
       <configuration name="SeleniumAudioFilterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumAudioFilterTest - 2016.11.14 at 17h 15m 32s.xml">
+    <history-entry file="SeleniumAudioFilterTest - 2016.11.15 at 15h 26m 33s.xml">
       <configuration name="SeleniumAudioFilterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumAudioFilterTest - 2016.11.14 at 17h 44m 05s.xml">
+    <history-entry file="SeleniumAudioFilterTest - 2016.11.15 at 15h 35m 11s.xml">
       <configuration name="SeleniumAudioFilterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumAudioFilterTest - 2016.11.14 at 17h 53m 00s.xml">
+    <history-entry file="SeleniumAudioFilterTest - 2016.11.15 at 15h 45m 52s.xml">
       <configuration name="SeleniumAudioFilterTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SeleniumDocsFilterTest - 2016.11.14 at 18h 30m 56s.xml">
+    <history-entry file="SeleniumDocsFilterTest - 2016.11.15 at 15h 52m 41s.xml">
       <configuration name="SeleniumDocsFilterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumDocsFilterTest_FilterDocumentsTest - 2016.11.14 at 17h 59m 58s.xml">
-      <configuration name="SeleniumDocsFilterTest.FilterDocumentsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumImageFilterTest - 2016.11.14 at 16h 48m 07s.xml">
-      <configuration name="SeleniumImageFilterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SelenumVideoFilterTest - 2016.11.14 at 16h 52m 11s.xml">
       <configuration name="SelenumVideoFilterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SelenumVideoFilterTest - 2016.11.14 at 17h 28m 41s.xml">
+      <configuration name="SelenumVideoFilterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SelenumVideoFilterTest - 2016.11.15 at 12h 08m 50s.xml">
+      <configuration name="SelenumVideoFilterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SelenumVideoFilterTest - 2016.11.15 at 15h 56m 02s.xml">
       <configuration name="SelenumVideoFilterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SelenumVideoFilterTest_FilterVideosTest - 2016.11.14 at 17h 23m 13s.xml">
@@ -679,7 +675,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.50269026" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -687,8 +683,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -727,12 +723,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="135" column="16" selection-start-line="132" selection-start-column="1" selection-end-line="141" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -743,12 +799,6 @@
           <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#783#803#0" expanded="true" />
-            <element signature="e#875#895#0" expanded="true" />
-            <element signature="e#4499#4500#0" expanded="true" />
-            <element signature="e#4540#4541#0" expanded="true" />
-            <element signature="e#4783#4784#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,9 +816,10 @@
         <state relative-caret-position="525">
           <caret line="35" column="72" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="84" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -779,12 +830,6 @@
           <caret line="130" column="86" selection-start-line="130" selection-start-column="86" selection-end-line="130" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#783#803#0" expanded="true" />
-            <element signature="e#875#895#0" expanded="true" />
-            <element signature="e#4499#4500#0" expanded="true" />
-            <element signature="e#4540#4541#0" expanded="true" />
-            <element signature="e#4783#4784#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -802,9 +847,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,9 +868,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -842,9 +889,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -862,9 +910,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,9 +931,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -905,33 +955,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#895#915#0" expanded="true" />
+            <element signature="e#4445#4446#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#5148#5149#0" expanded="false" />
+            <element signature="e#5239#5240#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumFilterTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="52" column="69" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#781#801#0" expanded="true" />
-            <element signature="e#2316#2336#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SelenumVideoFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="135" column="16" selection-start-line="132" selection-start-column="1" selection-end-line="141" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -940,27 +990,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumDocsFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="186">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#783#803#0" expanded="true" />
-            <element signature="e#875#895#0" expanded="true" />
-            <element signature="e#4499#4500#0" expanded="true" />
-            <element signature="e#4540#4541#0" expanded="true" />
-            <element signature="e#4783#4784#0" expanded="true" />
-            <element signature="e#4874#4875#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumAudioFilterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumImageFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

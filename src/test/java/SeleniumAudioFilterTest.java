@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,14 +30,35 @@ public class SeleniumAudioFilterTest {
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();
     private final String nextButtonClassName = "pager-next";
 
+
+    PrintWriter writer = null;
+
+    private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
+        try{
+            PrintWriter writer = new PrintWriter("linksFromAudioLibrary.txt", "UTF-8");
+
+            writer.println("The first line");
+
+            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+                writer.println(entry.getValue() + "\n");
+            }
+
+            writer.close();
+        } catch (Exception e) {
+            // do something
+        }
+    }
+
     @Test
-    public void FilterAudioTest() throws InterruptedException {
+    public void FilterAudioTest() throws InterruptedException, Exception {
         final String libraryURL = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aaudio&rNum=50";
         final String playerName = "jp-interface";
 
         driver.navigate().to(libraryURL);
 
         iteratePages();
+
+        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -115,7 +137,7 @@ public class SeleniumAudioFilterTest {
 
         for (Map.Entry<WebElement, String> entry : exceptionMap.entrySet()){
             System.out.println("list of links with missing audio player");
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getValue());
         }
 
         Assert.fail("some audios are missing, full list is provided before");

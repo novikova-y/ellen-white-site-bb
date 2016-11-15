@@ -29,7 +29,7 @@ public class SeleniumDocsFilterTest {
 
     private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
         try{
-            PrintWriter writer = new PrintWriter("linksFromLibrary.txt", "UTF-8");
+            PrintWriter writer = new PrintWriter("linksFromDocsLibrary.txt", "UTF-8");
 
             writer.println("The first line");
 
@@ -134,7 +134,7 @@ public class SeleniumDocsFilterTest {
 
         for (Map.Entry<WebElement, String> entry : exceptionMap.entrySet()){
             System.out.println("list of links with missing document viewer");
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getValue());
         }
 
         Assert.fail("some documents are missing, full list is provided before");
