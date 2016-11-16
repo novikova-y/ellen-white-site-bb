@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,13 +34,13 @@ public class SeleniumAudioFilterTest {
 
     PrintWriter writer = null;
 
-    private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
+    private void writeToFile(Map<WebElement, String> linksMap) throws Exception{ // Incapsulate in utils class
         try{
-            PrintWriter writer = new PrintWriter("linksFromAudioLibrary.txt", "UTF-8");
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-            writer.println("The first line");
+            PrintWriter writer = new PrintWriter("linksFromAudioLibrary_" + timestamp.toString().substring(0, 16) + ".txt", "UTF-8");
 
-            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            for (Map.Entry<WebElement, String> entry : linksMap.entrySet()){
                 writer.println(entry.getValue() + "\n");
             }
 
@@ -57,8 +58,6 @@ public class SeleniumAudioFilterTest {
         driver.navigate().to(libraryURL);
 
         iteratePages();
-
-        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -129,7 +128,7 @@ public class SeleniumAudioFilterTest {
         Thread.sleep(1000);
     }
 
-    private void checkExceptionMap(){
+    private void checkExceptionMap() throws  Exception{
         if (exceptionMap.size() <= 0) {
             System.out.println("everything is fine!");
             return;
@@ -139,6 +138,8 @@ public class SeleniumAudioFilterTest {
             System.out.println("list of links with missing audio player");
             System.out.println(entry.getValue());
         }
+
+        writeToFile(exceptionMap);
 
         Assert.fail("some audios are missing, full list is provided before");
     }
@@ -156,10 +157,10 @@ public class SeleniumAudioFilterTest {
     @BeforeClass
     public static void beforeClass(){
 
-        System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
-        driver = new FirefoxDriver();
-        //System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
-        //driver = new ChromeDriver();
+        //System.setProperty("webdriver.gecko.driver","/home/warumweil/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/home/warumweil/Downloads/chromedriver");
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

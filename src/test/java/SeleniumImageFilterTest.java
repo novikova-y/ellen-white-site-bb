@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,11 +33,11 @@ public class SeleniumImageFilterTest {
 
     private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
         try{
-            PrintWriter writer = new PrintWriter("linksFromImagesLibrary.txt", "UTF-8");
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-            writer.println("The first line");
+            PrintWriter writer = new PrintWriter("linksFromImagesLibrary_"+ timestamp.toString().substring(0, 16) + ".txt", "UTF-8");
 
-            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            for (Map.Entry<WebElement, String> entry : linksMap.entrySet()){
                 writer.println(entry.getValue() + "\n");
             }
 
@@ -54,8 +55,6 @@ public class SeleniumImageFilterTest {
         driver.navigate().to(libraryURL);
 
         iteratePages();
-
-        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -126,7 +125,7 @@ public class SeleniumImageFilterTest {
         Thread.sleep(1000);
     }
 
-    private void checkExceptionMap(){
+    private void checkExceptionMap() throws Exception{
         if (exceptionMap.size() <= 0) {
             System.out.println("everything is fine!");
             return;
@@ -136,6 +135,8 @@ public class SeleniumImageFilterTest {
             System.out.println("list of links with missing image viewer");
             System.out.println(entry.getValue());
         }
+
+        writeToFile(exceptionMap);
 
         Assert.fail("some images are missing, full list is provided before");
     }
@@ -153,8 +154,10 @@ public class SeleniumImageFilterTest {
     @BeforeClass
     public static void beforeClass(){
 
-        System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
-        driver = new FirefoxDriver();
+        //System.setProperty("webdriver.gecko.driver","/home/warumweil/Downloads/geckodriver");
+        //driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/home/warumweil/Downloads/chromedriver");
+        driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -163,6 +166,7 @@ public class SeleniumImageFilterTest {
     @AfterClass
     public static void afterClass(){
         driver.close();
+        driver.quit();
     }
 }
 

@@ -10,11 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import java.time.Instant;
 
 public class SelenumVideoFilterTest {
 
@@ -32,11 +34,11 @@ public class SelenumVideoFilterTest {
 
     private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
         try{
-            PrintWriter writer = new PrintWriter("linksFromVideoLibrary.txt", "UTF-8");
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-            writer.println("The first line");
+            PrintWriter writer = new PrintWriter("linksFromVideoLibrary_" + timestamp.toString().substring(0, 16) + ".txt", "UTF-8");
 
-            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            for (Map.Entry<WebElement, String> entry : linksMap.entrySet()){
                 writer.println(entry.getValue() + "\n");
             }
 
@@ -54,8 +56,6 @@ public class SelenumVideoFilterTest {
         driver.navigate().to(libraryURL);
 
         iteratePages();
-
-        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -126,7 +126,7 @@ public class SelenumVideoFilterTest {
         Thread.sleep(1000);
     }
 
-    private void checkExceptionMap(){
+    private void checkExceptionMap() throws Exception{
         if (exceptionMap.size() <= 0) {
             System.out.println("everything is fine!");
             return;
@@ -136,6 +136,8 @@ public class SelenumVideoFilterTest {
             System.out.println("list of links with missing video player");
             System.out.println(entry.getValue());
         }
+
+        writeToFile(exceptionMap);
 
         Assert.fail("some videos are missing, full list is provided before");
     }
@@ -155,7 +157,7 @@ public class SelenumVideoFilterTest {
 
         //System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
         //driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/warumweil/Downloads/chromedriver");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

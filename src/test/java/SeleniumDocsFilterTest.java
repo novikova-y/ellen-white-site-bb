@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.*;
+import java.sql.Timestamp;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -25,15 +26,17 @@ public class SeleniumDocsFilterTest {
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();
     private final String nextButtonClassName = "pager-next";
 
+    String textButtonClassSelector = "horizontal-tab-button horizontal-tab-button-0 first last selected";
+
     PrintWriter writer = null;
 
     private void writeToFile(Map<WebElement, String> linksMap) throws Exception{
         try{
-            PrintWriter writer = new PrintWriter("linksFromDocsLibrary.txt", "UTF-8");
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-            writer.println("The first line");
+            PrintWriter writer = new PrintWriter("linksFromDocsLibrary_" + timestamp.toString().substring(0, 16) + ".txt", "UTF-8");
 
-            for (Map.Entry<WebElement, String> entry : libraryMap.entrySet()){
+            for (Map.Entry<WebElement, String> entry : linksMap.entrySet()){
                 writer.println(entry.getValue() + "\n");
             }
 
@@ -52,8 +55,6 @@ public class SeleniumDocsFilterTest {
         driver.navigate().to(libraryURL);
 
         iteratePages();
-
-        writeToFile(libraryMap); ///TEMP
 
         inspectLinks();
 
@@ -126,7 +127,7 @@ public class SeleniumDocsFilterTest {
         Thread.sleep(1000);
     }
 
-    private void checkExceptionMap(){
+    private void checkExceptionMap() throws Exception{
         if (exceptionMap.size() <= 0) {
             System.out.println("everything is fine!");
             return;
@@ -136,6 +137,8 @@ public class SeleniumDocsFilterTest {
             System.out.println("list of links with missing document viewer");
             System.out.println(entry.getValue());
         }
+
+        writeToFile(exceptionMap);
 
         Assert.fail("some documents are missing, full list is provided before");
     }
@@ -159,7 +162,7 @@ public class SeleniumDocsFilterTest {
 
         //System.setProperty("webdriver.gecko.driver","/home/me/Downloads/geckodriver");
         //driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "/home/me/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/warumweil/Downloads/chromedriver");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
