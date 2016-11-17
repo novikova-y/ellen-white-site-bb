@@ -21,10 +21,6 @@ import java.time.Instant;
 public class SelenumVideoFilterTest {
 
     private static WebDriver driver;
-    final String pageURL = "http://ellenwhite.org/issues-and-answers";
-
-    final String libraryDocs = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Avideo";
-
 
     private static Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();

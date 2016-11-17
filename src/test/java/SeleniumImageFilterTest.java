@@ -20,10 +20,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SeleniumImageFilterTest {
     private static WebDriver driver;
-    final String pageURL = "http://ellenwhite.org/issues-and-answers";
-
-    final String libraryDocsBy100 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Aimage=25";
-
 
     private static Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();

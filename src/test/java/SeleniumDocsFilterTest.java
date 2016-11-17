@@ -2,12 +2,12 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.theories.internal.BooleanSupplier;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.*;
 import java.sql.Timestamp;
@@ -18,15 +18,11 @@ public class SeleniumDocsFilterTest {
 
     private static WebDriver driver;
 
-    final String pageURL = "http://ellenwhite.org/issues-and-answers";
-
-    final String libraryDocsBy100 = "http://ellenwhite.org/library?f[0]=bundle%3Afiles&f[1]=sm_field_files_primary_media%3Adocument&rNum=25";
-
     private static Map<WebElement, String> libraryMap = new HashMap<WebElement, String>();
     private static Map<WebElement,String> exceptionMap = new HashMap<WebElement, String>();
     private final String nextButtonClassName = "pager-next";
 
-    String textButtonClassSelector = "horizontal-tab-button horizontal-tab-button-0 first last selected";
+    private final String textButtonClassSelector = "horizontal-tab-button.horizontal-tab-button-0.first.last.selected";
 
     PrintWriter writer = null;
 
@@ -122,7 +118,7 @@ public class SeleniumDocsFilterTest {
 
         Thread.sleep(5000);
 
-        checkToolbarPresence(element, urlString);
+        validateLink(element, urlString);
 
         Thread.sleep(1000);
     }
@@ -147,8 +143,25 @@ public class SeleniumDocsFilterTest {
         driver.navigate().to(url);
     }
 
-    private void checkToolbarPresence(WebElement element, String url){
+    private Boolean textButtonIsPresent(){
+        if (driver.findElements(By.cssSelector(textButtonClassSelector)).size() == 0){
+            return false;
+        } else return true;
+    }
+
+    //TODO move checkPresence method to utils
+
+    private Boolean toolbarIsPresent(){
         if ( driver.findElements(By.id("toolbar_documentViewer0")).size() == 0){
+            return false;
+        } else return true;
+    }
+
+    private void validateLink(WebElement element, String url){
+        if (textButtonIsPresent() || toolbarIsPresent()){
+            //do nothing
+        }
+        else {
             exceptionMap.put(element, url);
         }
     }
